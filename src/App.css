@@ -1,38 +1,98 @@
-.App {
+*{
+  font-family: "Handlee", cursive;
+}
+h1 {
+  background-color: #2f363e;
+  height: 50px;
+  margin-top: -1px;
+  font-family: "Handlee", cursive;
+  color: lightgray;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.note-list {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.note.pinned {
+  border: 2px solid #f39c12;
+}
+
+.note button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #f39c12;
+  border: none;
   color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  margin-left: 200px;
+  width: 150px;
+  height: 150px;
+  padding: 25px;
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content:space-between;
+  border-radius: 2%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+.add-button {
+  padding: 8px;
+  margin: 100px;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 5px;
+  background: rgb(142, 235, 84);
+  border: 1px solid lightgray;
+}
+.delete{
+    padding: 8px;
+  margin: 100px;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 5px;
+  background: rgb(227, 71, 44);
+  border: 1px solid lightgray;
+}
+.save{
+   padding: 8px;
+  margin: 100px;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 5px;
+  background: rgb(227, 224, 44);
+  border: 1px solid lightgray;
 }
